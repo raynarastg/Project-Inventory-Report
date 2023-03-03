@@ -1,6 +1,7 @@
 from inventory_report.reports.simple_report import SimpleReport
 from collections import Counter
 
+
 class CompleteReport(SimpleReport):
     @classmethod
     def generate(cls, inventory):
@@ -12,5 +13,5 @@ class CompleteReport(SimpleReport):
         return (
             response_simple_report +
             "\n" +
-            f"Produtos estocados por empresa:\n{products}" 
+            f"Produtos estocados por empresa:\n{products}"
         )
