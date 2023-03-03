@@ -3,8 +3,8 @@ from collections import Counter
 
 
 class SimpleReport:
-    @staticmethod
-    def generate(inventory):
+    @classmethod
+    def generate(cls, inventory):
         old_data = min([date['data_de_fabricacao'] for date in inventory])
         expiration_date = min([date["data_de_validade"] for date in inventory
                               if (date["data_de_validade"] > datetime.now()
